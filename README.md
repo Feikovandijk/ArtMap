@@ -2,6 +2,7 @@
 
 ### Supported Versions:
 * Spigot/Paper 1.15.2, 1.14.4, 1.13.2 - Master Branch
+* Dev updates - Dev Branch
 
 ### Features
 * Custom easel entity
