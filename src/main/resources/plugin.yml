@@ -1,0 +1,46 @@
+name: ${project.name}
+main: me.Fupery.ArtMap.ArtMap
+version: ${project.version}
+description: ${project.description}
+depend: [ProtocolLib]
+softdepend: [WorldGuard, Factions, Denizen, GriefPrevention, RedProtect, Landlord, iDisguise, ASkyBlock, Residence, MarriageMaster]
+author: [Wispoffates,(Original) Fupery]
+api-version: 1.13
+
+commands:
+  art:
+      aliases: artmap
+      usage:  |
+        <command> save <title> : Save your artwork
+        <command> break : Remove current artwork and break easel
+        <command> delete <title> : Remove your artwork
+        <command> preview <title> : Preview an artwork
+        <command> help : Display help
+        <command> reload : Reloads the config
+        <command> give <player> <easel|canvas|artwork:<title>> <amount> : Give a player ArtMap item(s)
+
+permissions:
+  artmap.region.member:
+    description: Allows players to place/break easels in regions that they are a member of, but DO NOT own.
+    default: op
+
+  artmap.menu:
+    description: Allows players to open the ArtMap menu
+    default: true
+
+  artmap.artist:
+    description: Allows players to paint, and place/break easels in any region they own, or are a member of.
+    children:
+      artmap.region.member: true
+    default: op
+
+  artmap.artkit:
+    description: Gives players a kit of art supplies while they use an easel
+    default: op
+
+  artmap.admin:
+    description: Allows administrative commands
+    children:
+      artmap.artist: true
+      artmap.artkit: true
+    default: op

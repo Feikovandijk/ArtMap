@@ -1,0 +1,17 @@
+#.gitignore
+.vscode/*
+.classpath
+.idea/*
+.project
+.settings/*
+target/*
+*.iml
+
+*.DS_STORE
+
+dependency-reduced-pom.xml
+
+license.rtf
+
+/target/
+/.vscode/

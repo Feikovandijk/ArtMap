@@ -1,0 +1,46 @@
+#ArtMap Config
+
+#Use "/artmap reload" or restart your server to reload your configurations
+
+#Currently supported languages: [english, mandarin, dutch, russian, german, italian, custom]
+#Set language to "custom" and reload to generate a customizable lang.yml in your /plugins/ArtMap folder
+language: english
+
+#The name of the world where your players are using ArtMap
+world: world
+
+#The number of seconds between each time in-progress artworks are auto-saved to memory
+artworkAutoSave: 300
+
+#If true, prevents players from using obvious english swear words in artwork titles.
+swearFilter: true
+
+#If true, action bar messages (messages displayed above a player's toolbar) are disabled.
+disableActionBar: false
+
+#If you want to set custom recipes, set this to 'true' then use "/artmap reload" to generate a recipe file.
+customRecipes: false
+
+#If true, players with 'artmap.artkit' permission will automatically get a kit of art supplies when they mount an easel. Their normal inventory will be returned to them on dismount.
+forceArtKit: false
+
+#If true, return messages to players will not have the [ArtMap] prefix.
+hidePrefix: false
+
+#Force use of the GUI and disable most slash commands for a bit more immersive feel
+guiOnly: false
+
+#Fetch unknown heads from Mojang api.  Turning this off will show steve heads for players not in the server cache.
+headFetchMojang: true
+
+#Do head prefetch - Setting this to false will cause the first load of the artist menu to take a long time.
+headPrefetch: true
+
+#Head prefetch delay - Delay the head prefetch by the provided number of server ticks (20 ticks per second)
+headPrefetchDelay: 0
+
+#Head prefetch period - Delay between non cached head retrievals.  This prevents artmap from hitting mojang api limits.
+headPrefetchPeriod: 10000
+
+#Import delay (default is 100ms which is 10 artworks second)
+importDelay: 250
